@@ -27,7 +27,7 @@ SPI_DEVICE = 0 # Because the peripheral is connected to SPI 0 hardware lines of 
 #
 # initialize the SPI interface for the OLED display
 #
-oled_spi = SPI( SPI_DEVICE, baudrate= 100000, sck= spi_sck, mosi= spi_sda )
+oled_spi = SPI( SPI_DEVICE, baudrate= 100000, sck=spi_sck, mosi= spi_sda )
 
 #
 # Initialize the display
