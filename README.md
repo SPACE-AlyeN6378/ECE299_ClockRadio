@@ -3,8 +3,8 @@ Clock radio is driven by Raspberry Pi Pico
 ## Configuration
 ### NORMAL MODE
 
-- Button 1 - Toggle 12-24 hour format
-- Button 2 - Mute
+- Button 1 - Mute
+- Button 2 - Toggle 12-24 hour format
 - Button 3 - Set time
 - Button 4 - Set alarm
 - Rotary button - Toggle between changing frequency/Volume 
@@ -27,3 +27,8 @@ Clock radio is driven by Raspberry Pi Pico
 - Button 4 - Alarm on/off
 - Rotary button - Confirm and exit
 - Turn knob - Change alarm time
+
+### WHILE ALARM IS RINGING
+
+- Button 1 - Stop alarm
+- Button 2 - Snooze
