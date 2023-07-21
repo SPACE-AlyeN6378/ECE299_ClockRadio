@@ -7,7 +7,7 @@ class Button:
         self.pin = Pin(pin_number, Pin.IN, Pin.PULL_UP)
         
         # What will happen if I push this button?
-        self.callback = on_push
+        self.on_push = on_push
         
         # Initialize interrupt
         self.pin.irq(trigger=Pin.IRQ_FALLING, handler=self.interrupt_handler)
@@ -15,7 +15,7 @@ class Button:
     # This interrupt handler contains the debounce algorithm
     def interrupt_handler(self, pin):
         if pin.value() == 0: # check if the button is pressed
-            utime.sleep_ms(10) # Wait for the button signal to settle
+            utime.sleep_ms(20) # Wait for the button signal to settle
             if pin.value() == 0: # Then check if the button is still pressed
-                self.callback() # Trigger the function!
+                self.on_push() # Trigger the function!
 

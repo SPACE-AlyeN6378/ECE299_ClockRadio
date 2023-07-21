@@ -1,8 +1,7 @@
-from utils.Clock import Clock
-import time
+from cr_system import CRSystem
 
-clock = Clock(0, 59)
-while True:
-    print(clock.stringify(twelve_hr_format=True))
-    time.sleep(0.05)
-    clock.update()
+button_pins = (4, 5, 6, 7)
+rotary_encoder_pins = (3, 0, 1)
+system = CRSystem(*button_pins, *rotary_encoder_pins)
+
+system.mainloop()
